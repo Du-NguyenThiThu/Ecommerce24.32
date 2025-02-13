@@ -16,8 +16,7 @@ const FlashSalesMain = () => {
     const [catData, setCatData] = useState<CategoryParams[]>(Category)
 
     const handlePress = async (item: CategoryParams) => {
-        navigation.navigate("fashionCategory")
-        // navigation.navigate("fashionCategory", {item})
+        navigation.navigate("fashionCategory", { item })
     }
     const renderItems = ({ item }: renderCatProps) => (
         <CategoryCard

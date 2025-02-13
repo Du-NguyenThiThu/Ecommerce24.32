@@ -2,7 +2,7 @@ import { View, Text, Platform, ScrollView, SectionList } from 'react-native'
 import React, { useRef } from 'react'
 import { TabsStackScreenProps } from '../Navigation/TabsNavigation'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { HeadersComponent } from '../Components/HeaderComponents/HeaderComponent'
+// import { HeaderComponent } from '../Components/HeaderComponents/HeaderComponent'
 import ImageSlider from '../Components/HomeScreenComponents/ImageSlider'
 import FlashSalesMain from '../Components/FlashSalesComponents/FlashSalesMain'
 import ProductListMain from '../Components/ProductListComponents/ProductListMain'
@@ -27,15 +27,13 @@ const HomeScreen = ({ navigation, route }: TabsStackScreenProps<"Home">) => {
     ]
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === "android" ? 40 : 0, flex: 1, backgroundColor: "white" }}>
-            <HeadersComponent gotoCartScreen={gotoCartScreen} />
-
+            {/* <HeaderComponent gotoCartScreen={gotoCartScreen} /> */}
             <ScrollView horizontal showsHorizontalScrollIndicator={false}
                 style={{ backgroundColor: "#efg" }}
             >
                 <ImageSlider images={sliderImages} />
             </ScrollView>
-            <View style={{ backgroundColor: "yellow", flex: 1 }}>
-
+            <View style={{ backgroundColor: "blue", flex: 1 }}>
                 <SectionList
                     sections={sectionListData}
                     overScrollMode='always'
@@ -58,10 +56,8 @@ const HomeScreen = ({ navigation, route }: TabsStackScreenProps<"Home">) => {
                 // stickySectionHeadersEnabled={true}
                 // viewabilityConfig={viewabilityConfig}
                 // onViewableItemsChanged={onViewableItemsChanged}
-
                 />
             </View>
-
         </SafeAreaView >
     )
 }

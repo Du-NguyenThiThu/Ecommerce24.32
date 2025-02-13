@@ -10,7 +10,7 @@ interface IHeaderParams {
     gotoCartScreen?: () => void;
 }
 
-export const HeadersComponent = ({ goToPrevios, search, cartLength, gotoCartScreen }: IHeaderParams) => {
+export const HeaderComponent = ({ goToPrevios, search, cartLength, gotoCartScreen }: IHeaderParams) => {
     const [searchInput, setSearchInput] = useState("")
     return (
         <View style={{ backgroundColor: "#000", padding: 10, flexDirection: "row", alignItems: "center" }}>
